@@ -12,7 +12,7 @@ function profilePhotoMiddleware(req, res, next) {
       if (err.message === 'File too large') {
         req.flash('error', 'Profile photo size exceeds 2 MB')
         return res.redirect('/users/me/edit')
-      } else if (err.message === 'Photo Upload Exeption') {
+      } else if (err.message === 'Photo Upload Exception') {
         req.flash('error', 'Error uploading photo :( Try one of the avatars for now ??')
         return res.redirect('/users/me/edit')
       } else {

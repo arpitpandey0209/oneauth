@@ -14,7 +14,7 @@ const upload = Multer ({
               callback (null, srvFileName)
             } catch (e) {
                 Raven.captureException(e)
-              callback(new Error('Photo Upload Exeption'))
+              callback(new Error('Photo Upload Exception'))
             }
         }
     }),
